@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Alphabet extends StatefulWidget {
   @override
@@ -8,6 +9,6 @@ class Alphabet extends StatefulWidget {
 class _AlphabetState extends State<Alphabet> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(body: Container());
   }
 }

@@ -8,9 +8,9 @@ class Menu extends StatelessWidget {
         backgroundColor: Colors.red[300],
       ),
       body: Center(
-        child: Column(children: [
+        child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
           RaisedButton(
-            child: Text('Quiz'),
+            child: Text('Викторина'),
             onPressed: () {
               Navigator.pushNamed(context, '/quiz');
             },
@@ -18,7 +18,7 @@ class Menu extends StatelessWidget {
           RaisedButton(
             child: Text('Вступление'),
             onPressed: () {
-              Navigator.pushNamed(context, '/aphabet');
+              Navigator.pushNamed(context, '/pininIntro');
             },
           ),
         ]),
