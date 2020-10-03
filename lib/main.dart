@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:todo/components/end_screen.dart';
 import 'components/menu.dart';
 import 'components/answer.dart';
 import 'components/alphabet.dart';
 import 'components/hieroglyphs_intro.dart';
 import 'components/pinin_intro.dart';
 import 'components/letter_intro.dart';
+import 'components/initials.dart';
+import 'components/end_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -25,6 +28,8 @@ class MyApp extends StatelessWidget {
         '/hieroglyphs': (context) => Hieroglyphs(),
         '/pininIntro': (context) => PininIntro(),
         '/letterIntro': (context) => LetterIntro(),
+        '/initials': (context) => Initials(),
+        '/endScreen': (context) => EndScreen(),
       },
     );
   }

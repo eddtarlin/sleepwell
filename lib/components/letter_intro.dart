@@ -13,8 +13,13 @@ class _LetterIntroState extends State<LetterIntro> {
   bool b_clicked;
   bool a_clicked;
   bool audio_clicked;
+  AudioCache _audioCache;
+
   void initState() {
     super.initState();
+    _audioCache = AudioCache(
+        prefix: "audio/",
+        fixedPlayer: AudioPlayer()..setReleaseMode(ReleaseMode.STOP));
     b_clicked = false;
     a_clicked = false;
     audio_clicked = false;
@@ -70,7 +75,9 @@ class _LetterIntroState extends State<LetterIntro> {
                             color: Colors.green[400],
                             size: 50,
                           ),
-                          onTap: () {}),
+                          onTap: () {
+                            _audioCache.play('kick.mp3');
+                          }),
                       Container(
                         width: 10,
                       ),
@@ -83,6 +90,7 @@ class _LetterIntroState extends State<LetterIntro> {
                                       fontStyle: FontStyle.normal))),
                         ),
                         onTap: () {
+                          _audioCache.play('kick.mp3');
                           setState(() {
                             b_clicked = true;
                           });
@@ -98,6 +106,7 @@ class _LetterIntroState extends State<LetterIntro> {
                                     fontSize: 55,
                                     fontStyle: FontStyle.normal))),
                         onTap: () {
+                          _audioCache.play('kick.mp3');
                           setState(() {
                             a_clicked = true;
                           });
